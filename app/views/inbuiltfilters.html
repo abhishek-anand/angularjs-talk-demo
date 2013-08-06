@@ -1,0 +1,15 @@
+<p>
+	<legend> Date Filter</legend>
+	<span>{{timestamp | date:'MM/dd/yyyy @ h:mma'}}</span>
+</p>
+<p>
+	<legend> Lower Case </legend>
+	<span>{{text | lowercase}}</span>
+</p>
+<p>
+	<legend>Filter </legend>
+	<input type="text" ng-model="search.name">
+	<div ng-repeat="result in results | filter:search.name">
+		{{result.name}}
+	</div>
+</p>
